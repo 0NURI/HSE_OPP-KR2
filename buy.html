@@ -89,137 +89,122 @@
     </style>
     <title>BUBBLE</title>
 </head>
-<div class="text-center">
-    <img src="./bubble.png" width="100%" height="100%">
-</div>
-<br>
-<div class="text-center">
-    <h1 id="back"><b>Оформление заказа</b></h1><br><br>
+
+<body>
+    <div class="text-center">
+        <img src="./bubble.png" width="100%" height="100%">
+    </div>
+    <br>
     <form action="https://example.com/order" method="get">
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="BEHRINGER U-PHORIA.png">
-                <div class="product-name">Аудиокарта BEHRINGER U-PHORIA</div>
-                <div class="product-description">формат звуковой карты 2.0, USB Type-A, 16 бит/48 кГц, ASIO</div>
-                <div class="product-price">Цена 7 199 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="BEHRINGER U-PHORIA"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="BEHRINGER UMC22.png">
-                <div class="product-name">Аудиокарта BEHRINGER UMC22</div>
-                <div class="product-description">формат звуковой карты 2.0, USB Type-A, 16 бит/48 кГц</div>
-                <div class="product-price">Цена 7 199 р</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="BEHRINGER UMC22"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="Wrugste GV-AR001B.png">
-                <div class="product-name">Аудиокарта Wrugste GV-AR001B</div>
-                <div class="product-description">USB Type-C, 24 бит/192 кГц, ASIO</div>
-                <div class="product-price">Цена 7 499 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="Wrugste GV-AR001B"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="MK-207.png">
-                <div class="product-name">Микрофон Октава МК-207</div>
-                <div class="product-description">проводной, ручной, от 20 Гц до 20000 Гц, XLR </div>
-                <div class="product-price">Цена 41 999 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="Октава МК-207"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="Audio-technica AT2050.png">
-                <div class="product-name">Микрофон Audio-technica AT2050</div>
-                <div class="product-description">проводной, подвесной, -42 дБ, от 20 Гц до 20000 Гц, XLR</div>
-                <div class="product-price">Цена 38 799 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="Audio-technica AT2050"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="Октава МК-119.png">
-                <div class="product-name">Микрофон Октава МК-119</div>
-                <div class="product-description">проводной, подвесной, от 20 Гц до 20000 Гц, XLR</div>
-                <div class="product-price">Цена 34 799 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="Октава МК-119"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="MIDI Arturia MiniLab 3.png">
-                <div class="product-name">Клавиатура MIDI Arturia MiniLab 3</div>
-                <div class="product-description">клавиш - 25, октав - 2, синтезаторная, ЖК-дисплей, подключение педалей,
-                    MIDI выход, 1.5 кг</div>
-                <div class="product-price">Цена 12 999 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="MIDI Arturia MiniLab 3"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="MIDI Arturia KeyLab Essential 49 mk3.png">
-                <div class="product-name">Клавиатура MIDI Arturia KeyLab Essential 49 mk3</div>
-                <div class="product-description">клавиш - 49, октав - 4, синтезаторная, ЖК-дисплей, подключение педалей,
-                    MIDI выход, USB Type-С, 2.78 кг</div>
-                <div class="product-price">Цена 23 799 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="MIDI Arturia KeyLab Essential 49 mk3"> Заказать
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="MIDI AKAI PRO MPK MINI PLAY MK3.png">
-                <div class="product-name">Клавиатура MIDI AKAI PRO MPK MINI PLAY MK3</div>
-                <div class="product-description">клавиш - 25, октав - 2, синтезаторная, полувзвешенная, ЖК-дисплей,
-                    подключение педалей, USB Type-B, 0.86 кг</div>
-                <div class="product-price">Цена 15 999 р.</div>
-                <div class="product-order">
-                    <input type="checkbox" name="product[]" value="MIDI AKAI PRO MPK MINI PLAY MK3"> Заказать
-                </div>
-            </div>
+        <div class="text-center">
+            <label for="client_name">Ваше имя:</label>
+            <input type="text" id="client_name" name="client_name" placeholder="Введите ваше имя" required>
+            <br><br>
+            <button type="submit">Отправить заявку</button>
+            <br>
+            <button type="reset">Очистить форму</button>
+            <br>
+            <button type="button" onclick="window.location.href='./index.html'">На главную</button>
+            <br>
+            <label style="margin-top: 5%;">Способ получения:</label><br>
+            <input type="radio" id="delivery" name="recieve" value="delivery" checked>
+            <label for="with_engineer">Доставка (+399 рублей)</label><br>
+            <input type="radio" id="self_pickup" name="recieve" value="self_pickup">
+            <label for="without_engineer">Самовывоз (бесплатно)</label><br>
         </div>
-
-        <label style="margin-top: 5%;">Способ получения:</label><br>
-        <input type="radio" id="delivery" name="recieve" value="delivery" checked>
-        <label for="with_engineer">Доставка (+399 рублей)</label><br>
-        <input type="radio" id="self_pickup" name="recieve" value="self_pickup">
-        <label for="without_engineer">Самовывоз (бесплатно)</label><br>
-        <br>
-
-        <label for="client_name">Ваше имя:</label>
-        <input type="text" id="client_name" name="client_name" placeholder="Введите ваше имя" required>
-        <br><br>
-
-        <button type="submit">Отправить заявку</button>
-        <br><br><br>
-
-        <button type="reset">Очистить форму</button>
-        <button type="button" onclick="window.location.href='./index.html'">На главную</button>
+        <div class="text-center">
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="BEHRINGER U-PHORIA.png">
+                    <div class="product-name">Аудиокарта BEHRINGER U-PHORIA</div>
+                    <div class="product-description">формат звуковой карты 2.0, USB Type-A, 16 бит/48 кГц, ASIO</div>
+                    <div class="product-price">Цена 7 199 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="BEHRINGER U-PHORIA"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="BEHRINGER UMC22.png">
+                    <div class="product-name">Аудиокарта BEHRINGER UMC22</div>
+                    <div class="product-description">формат звуковой карты 2.0, USB Type-A, 16 бит/48 кГц</div>
+                    <div class="product-price">Цена 7 199 р</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="BEHRINGER UMC22"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Wrugste GV-AR001B.png">
+                    <div class="product-name">Аудиокарта Wrugste GV-AR001B</div>
+                    <div class="product-description">USB Type-C, 24 бит/192 кГц, ASIO</div>
+                    <div class="product-price">Цена 7 499 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="Wrugste GV-AR001B"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="MK-207.png">
+                    <div class="product-name">Микрофон Октава МК-207</div>
+                    <div class="product-description">проводной, ручной, от 20 Гц до 20000 Гц, XLR </div>
+                    <div class="product-price">Цена 41 999 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="Октава МК-207"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Audio-technica AT2050.png">
+                    <div class="product-name">Микрофон Audio-technica AT2050</div>
+                    <div class="product-description">проводной, подвесной, -42 дБ, от 20 Гц до 20000 Гц, XLR</div>
+                    <div class="product-price">Цена 38 799 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="Audio-technica AT2050"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Октава МК-119.png">
+                    <div class="product-name">Микрофон Октава МК-119</div>
+                    <div class="product-description">проводной, подвесной, от 20 Гц до 20000 Гц, XLR</div>
+                    <div class="product-price">Цена 34 799 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="Октава МК-119"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="MIDI Arturia MiniLab 3.png">
+                    <div class="product-name">Клавиатура MIDI Arturia MiniLab 3</div>
+                    <div class="product-description">клавиш - 25, октав - 2, синтезаторная, ЖК-дисплей, подключение
+                        педалей,
+                        MIDI выход, 1.5 кг</div>
+                    <div class="product-price">Цена 12 999 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="MIDI Arturia MiniLab 3"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="MIDI Arturia KeyLab Essential 49 mk3.png">
+                    <div class="product-name">Клавиатура MIDI Arturia KeyLab Essential 49 mk3</div>
+                    <div class="product-description">клавиш - 49, октав - 4, синтезаторная, ЖК-дисплей, подключение
+                        педалей,
+                        MIDI выход, USB Type-С, 2.78 кг</div>
+                    <div class="product-price">Цена 23 799 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="MIDI Arturia KeyLab Essential 49 mk3"> Заказать
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="MIDI AKAI PRO MPK MINI PLAY MK3.png">
+                    <div class="product-name">Клавиатура MIDI AKAI PRO MPK MINI PLAY MK3</div>
+                    <div class="product-description">клавиш - 25, октав - 2, синтезаторная, полувзвешенная, ЖК-дисплей,
+                        подключение педалей, USB Type-B, 0.86 кг</div>
+                    <div class="product-price">Цена 15 999 р.</div>
+                    <div class="product-order">
+                        <input type="checkbox" name="product[]" value="MIDI AKAI PRO MPK MINI PLAY MK3"> Заказать
+                    </div>
+                </div>
+            </div>
+            <br>
     </form>
-</div>
-<br><br>
-<div id="contact" class="fs-6 d-flex justify-content-center py-4"
-    style="background-color: rgb(13, 48, 67); color:white">
-    <ul>
-        <li><b>Студия Bubble</b></li>
-        <li><a target="_blank"
-                href="https://yandex.ru/maps/geo/kottedzhny_posyolok_bobyor/3300436795/?ll=38.154863%2C54.682411&mode=search"
-                class="text-white">📍г.Москва, улица снежного краба, 15324</a></li>
-        <li>📞+78939345785729083</li>
-        <li>🕓Время работы - круглосуточно, без выходных</li>
-        <li>✉️bubble@bubble.com</li>
-    </ul>
-</div>
+    </div>
 
-<div style="background-color: rgb(13, 48, 67); color: white;">
-    <a href="#back"><img src="./arrow.png"
-            style="width: 30px; height: 30px; position: fixed; bottom: 20px; right: 20px; z-index: 1000;"></a>
-    <div class="text-center">Bubble ©</div><br>
-</div>
 </body>
 
 </html>
