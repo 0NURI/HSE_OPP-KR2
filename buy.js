@@ -19,8 +19,8 @@ async function getResponce(sortType) {
         content = content.sort((a, b) => a.price - b.price);
     } else {
         content = content.sort((a, b) => {
-            const nameA = a.title.toUpperCase();
-            const nameB = b.title.toUpperCase();
+            const nameA = a.title.toLowerCase();
+            const nameB = b.title.toLowerCase();
             if (nameA < nameB) return -1;
             if (nameA > nameB) return 1;
             return 0;
@@ -51,7 +51,11 @@ async function getResponce(sortType) {
                 <h5 class="card-title">${contentFilter[key].title}</h5>
                 <p class="card-description">${contentFilter[key].description}.</p>
                 <p class="card-price">Цена ${contentFilter[key].price} р.</p>
-                <p class="card-text">Заказать <input class="w-25" type="checkbox" name="product[]" value=${contentFilter[key].vendor_code}></p>
+                <div class="d-flex justify-content-center mt-auto">
+                    <p class="card-text">Заказать 
+                        <input class="w-25" type="checkbox" name="product[]" value=${contentFilter[key].vendor_code}>
+                    </p>
+                </div>
             </li>
         `;
     }
